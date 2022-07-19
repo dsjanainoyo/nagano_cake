@@ -1,0 +1,27 @@
+<h2>商品編集</h2>
+
+<thead>
+    <tr>
+        <th>商品画像</th>
+        <th>商品名</th>
+        <th>商品説明</th>
+        <th>ジャンル</th>
+        <th>税抜価格</th>
+        <th>販売ステータス</th>
+    </tr>
+</thead>
+
+<tbody>
+    <%=form_with model: @item, url: admin_item_path(@item), method: :patch do |f|%>
+    <tr>
+        <td><%=f.file_field :image, placeholder: "ファイルを選択",accept: "image/*"%></td>
+        <td><%=f.text_field :name%></td>
+        <td><%=f.text_area :introduction%></td>
+        <td><%=f.collection_select :genre_id, Genre.all,:id,:name%></td>
+        <td><%=f.text_field :price%>円</td>
+        <td> </td>
+        
+        <%=f.submit "変更を保存"%>
+    <%end%>
+    </tr>
+</tbody>

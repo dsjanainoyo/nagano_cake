@@ -2,5 +2,12 @@ ja:
   enums:
     order:
       payment_method:
-        credit_card:"クレジットカード"
-        transfer:"銀行振込"
+        credit_card: "クレジットカード"
+        transfer: "銀行振込"
+        
+  ja:
+    enums:
+      item:
+        is_active:
+          on_sale: "販売中"
+          discontinued: "販売停止中"
